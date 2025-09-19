@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CVA USA Scheduler</title>
+    <style>
+      :root {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #15202b;
+        background-color: #f6f8fb;
+      }
+      body {
+        margin: 0;
+        padding: 0 1.5rem 3rem;
+      }
+      header {
+        padding: 1.5rem 0 1rem;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.8rem;
+      }
+      main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        align-items: flex-start;
+      }
+      section {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+        padding: 1.25rem;
+      }
+      .board {
+        grid-column: span 2;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 0.35rem 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #d9e2ec;
+        font-size: 0.9rem;
+      }
+      th {
+        background: #eef2ff;
+        font-weight: 600;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.15rem 0.5rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+      }
+      .pill.draft {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .pill.submitted {
+        background: #e0f2fe;
+        color: #075985;
+      }
+      .pill.approved {
+        background: #dcfce7;
+        color: #166534;
+      }
+      .pill.denied {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CVA USA / The Heart House — Scheduling Console</h1>
+      <p>Vacation workflow, rule ingestion, and fairness analytics for the 2026 pilot window.</p>
+    </header>
+    <main>
+      <section id="vacation-panel">
+        <h2>Vacation Requests</h2>
+        <div id="vacation-form"></div>
+      </section>
+      <section id="allowance-panel">
+        <h2>Allowance Snapshot</h2>
+        <div id="allowance-summary"></div>
+      </section>
+      <section id="schedule-board" class="board">
+        <h2>Schedule Board</h2>
+        <div id="board-root"></div>
+      </section>
+      <section id="fairness-panel">
+        <h2>Fairness Dashboard</h2>
+        <div id="fairness-root"></div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

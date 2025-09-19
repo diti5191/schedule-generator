@@ -1,0 +1,24 @@
+{
+  "cells": {
+    "offices": {
+      "HH": {"AM": "K11", "PM": "K13"},
+      "HH3": {"AM": "K16", "PM": "K18"},
+      "SVI": {"AM": "K21", "PM": "K23"},
+      "WT": {"AM": "K26", "PM": "K28"}
+    },
+    "hospitals": {
+      "RMC": {"AM": "AD11", "PM": "AD13"},
+      "WTH": {"AM": "AT11", "PM": "AT13"},
+      "COO_OBL": {"AM": "H21", "PM": "H23"}
+    }
+  },
+  "call_cells": {
+    "noninvasive_weekday": {"0": "B12", "1": "B17", "2": "B22", "3": "B27", "4": "B32"},
+    "interventional_weekday": {"0": "B14", "1": "B19", "2": "B24", "3": "B29", "4": "B34"},
+    "weekend_noninv": {"friday": "G3", "saturday": "G4", "sunday": "G5"},
+    "weekend_interv": {"summary": "G6"}
+  },
+  "vacation_headers": {
+    "order": ["L", "M", "O", "P", "Q", "R", "S"]
+  }
+}

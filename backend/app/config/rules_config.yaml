@@ -1,0 +1,39 @@
+{
+  "weights": {
+    "hospital_priority": 10.0,
+    "float_priority": 5.0,
+    "office_priority": 2.0,
+    "fairness_weekend": 1.5,
+    "fairness_call": 1.0,
+    "commute": 0.5
+  },
+  "weekend_targets": {
+    "MD": {
+      "default": 4,
+      "overrides": {
+        "HAS": 0,
+        "DAS": 0
+      }
+    },
+    "APN": {
+      "default": 0
+    }
+  },
+  "rotations": {
+    "virtua_pm_cycle": ["JOO", "RAM", "LMS", "BWL"],
+    "wt_hospital_md": ["JOO", "RAM", "LMS", "BWL", "CLN", "FRG"],
+    "wt_hospital_apn": ["AG", "ACS", "KC", "MB", "VJC", "AD"],
+    "rmc_md": ["SHF", "MCR", "FRG", "CLN", "GHM"],
+    "rmc_apn": ["VJC", "JKT", "NMC", "KC"]
+  },
+  "icd_clinic": {
+    "enabled": true,
+    "ep_mds": ["EKT", "JWW", "JKT"],
+    "ep_apns": ["JKT", "NMC"],
+    "nmc_days": [0, 1]
+  },
+  "obl": {
+    "enabled": true,
+    "physicians": ["DPR", "APZ", "AML", "VKV", "ZZR"]
+  }
+}
